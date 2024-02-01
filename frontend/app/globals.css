@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: #111011;
+  --bg-color: #fefefe;
+  --background-end-rgb: 255, 255, 255;
+  --font-family: 'Times New Roman', Times, serif;
+  /* --text-color: ; 
+  */
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  background-color: var(--foreground-rgb);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.logo{
+  font-size: 22px;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+.hamburger{
+  display: none;
+}
+
+.nav-bar ul{
+  display: flex;
+}
+
+.nav-bar ul li a{
+  display: block;
+  color: #fefefe;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+   color: #111011;
+   background-color: #fefefe;
+}
+
+.nav-bar ul li a.active{
+  color: #111011;
+  background-color: #fefefe;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+@media only screen and (max-width: 1320px) {
+  header{
+      padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  header{
+      padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hamburger{
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger .line{
+      width: 30px;
+      height: 3px;
+      background-color: #fefefe;
+      margin: 6px 0;
+  }
+  .nav-bar{
+      height: 0px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background-color: #111011;
+      transition: 0.5s;
+  }
+
+  .nav-bar.active{
+      height: 450px;
+  }
+
+  .nav-bar ul{
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+      overflow: hidden;
+  }
+  .nav-bar.active ul{
+      opacity: 1;
+  }
+  .nav-bar ul li a{
+      margin-bottom: 12px;
+  }
+}
