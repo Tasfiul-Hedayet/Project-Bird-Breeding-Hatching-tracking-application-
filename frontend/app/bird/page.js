@@ -54,6 +54,7 @@ function page() {
 
   return (
     <>
+    <div className="body">
       <h1>Bird Page</h1>
 
       <form onSubmit={handleSubmit}>
@@ -239,6 +240,7 @@ function page() {
 
         <button type="submit">Submit</button>
       </form>
+      </div>
     </>
   );
 }
