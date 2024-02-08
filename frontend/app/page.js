@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <div class="logo">BizManage CRM </div>
+        <div class="logo">Knudson Farm</div>
         <div class="hamburger">
           <div class="line"></div>
           <div class="line"></div>
@@ -42,6 +42,13 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+      <div className="hero-section">
+        <div>
+          <h1>Bird Breeding & Hatching tracking application</h1>
+          <button> <Link href="/bird">Add Bird</Link></button>
+          <button><Link href="/hatch">Add Hatch</Link></button>
+        </div>
+      </div>
     </>
   );
 }
