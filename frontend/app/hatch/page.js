@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-function page() {
+function Page() {
   const [hatchNumber, setHatchNumber] = useState(1); // Hatch Number (should increment)
   const [identification, setIdentification] = useState(""); // Identification
   const [speciesHatch, setSpeciesHatch] = useState(""); // Species
@@ -131,4 +131,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

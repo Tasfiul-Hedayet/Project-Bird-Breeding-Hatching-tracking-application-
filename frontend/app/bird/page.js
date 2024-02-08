@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-function page() {
+function Page() {
   const [identifier, setIdentifier] = useState(1); //Identifier
   const [name, setName] = useState(""); // Name
   const [species, setSpecies] = useState(""); // Species
@@ -245,4 +245,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
