@@ -136,6 +136,43 @@ button:hover {
 }
 
 
+.body > h1{
+  text-align: center;
+  color: var(--text-color);
+  padding: 20px;
+  font-size: 44px;
+}
+
+.body > form{
+  display: flex;
+  flex-direction: column;
+  padding-left: 200px;
+}
+
+.body > form > label{
+  color: var(--third-color);
+  padding: 15px 0px 15px 0px;
+  /* font-size: 18px; */
+}
+
+.body > form > input{
+  width: 400px;
+  padding: 10px 0px 15px 10px;
+}
+
+.body > form > textarea{
+  width: 400px;
+  padding: 15px 0px 15px 0px;
+}
+
+.body > form > button{
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  display: inline;
+}
+
+
+
 @media only screen and (max-width: 1320px) {
   header{
       padding: 0 50px;
@@ -148,7 +185,7 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 700px) {
   .hamburger{
       display: block;
       cursor: pointer;
@@ -188,5 +225,40 @@ button:hover {
   }
   .nav-bar ul li a{
       margin-bottom: 12px;
+  }
+
+  .body > h1{
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 28px;
+  }
+  
+  .body > form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+  }
+  
+  .body > form > label{
+    color: var(--third-color);
+    padding: 15px 0px 15px 0px;
+    /* font-size: 18px; */
+  }
+  
+  .body > form > input{
+    width: 250px;
+    padding: 10px 0px 15px 10px;
+  }
+  
+  .body > form > textarea{
+    width: 250px;
+    padding: 15px 0px 15px 0px;
+  }
+  
+  .body > form > button{
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    display: inline;
   }
 }

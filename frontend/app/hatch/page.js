@@ -1,6 +1,6 @@
-
 "use client";
 
+import Navbar from "@/components/Navbar";
 import { useState } from "react";
 
 function Page() {
@@ -28,105 +28,199 @@ function Page() {
     // You can use the form values as needed, e.g., send them to a server or perform calculations.
     // For simplicity, let's just log the values to the console for now.
     console.log({
-      hatchNumber, identification, speciesHatch, breedHatch, cockIdentifier,
-      henIdentifier, setDate, lockdownDate, hatchDate, numberSet, numberFertile,
-      numberHatch, fertilityRate, hatchRate, hatchabilityRate, location, notes
+      hatchNumber,
+      identification,
+      speciesHatch,
+      breedHatch,
+      cockIdentifier,
+      henIdentifier,
+      setDate,
+      lockdownDate,
+      hatchDate,
+      numberSet,
+      numberFertile,
+      numberHatch,
+      fertilityRate,
+      hatchRate,
+      hatchabilityRate,
+      location,
+      notes,
     });
   };
 
   return (
     <>
-      <h1>Hatch</h1>
+      <div className="body">
+        <Navbar />
+        <h1>Hatch</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Hatch Number:
-          <input type="number" value={hatchNumber} onChange={(e) => setHatchNumber(e.target.valueAsNumber)} />
-        </label>
-        <label>
-          Identification:
-          <input type="text" value={identification} onChange={(e) => setIdentification(e.target.value)} />
-        </label>
+        <form onSubmit={handleSubmit}>
+          <label>Hatch Number:</label>
+          <input
+            type="number"
+            value={hatchNumber}
+            onChange={(e) => setHatchNumber(e.target.valueAsNumber)}
+          />
 
-        <label>
-          Species:
-          <input type="text" value={speciesHatch} onChange={(e) => setSpeciesHatch(e.target.value)} />
-        </label>
+          <label>Identification:</label>
+          <input
+            type="text"
+            value={identification}
+            onChange={(e) => setIdentification(e.target.value)}
+          />
 
-        <label>
-          Breed:
-          <input type="text" value={breedHatch} onChange={(e) => setBreedHatch(e.target.value)} />
-        </label>
+          <label>
+            Species:
+           
+          </label>
+          <input
+              type="text"
+              value={speciesHatch}
+              onChange={(e) => setSpeciesHatch(e.target.value)}
+            />
 
-        <label>
-          Cock Identifier:
-          <input type="text" value={cockIdentifier} onChange={(e) => setCockIdentifier(e.target.value)} />
-        </label>
+          <label>
+            Breed:
+           
+          </label>
+          <input
+              type="text"
+              value={breedHatch}
+              onChange={(e) => setBreedHatch(e.target.value)}
+            />
 
-        <label>
-          Hen Identifier:
-          <input type="text" value={henIdentifier} onChange={(e) => setHenIdentifier(e.target.value)} />
-        </label>
+          <label>
+            Cock Identifier:
+          
+          </label>
+          <input
+              type="text"
+              value={cockIdentifier}
+              onChange={(e) => setCockIdentifier(e.target.value)}
+            />
 
-        <label>
-          Set (Date):
-          <input type="date" value={setDate} onChange={(e) => setSetDate(e.target.value)} />
-        </label>
+          <label>
+            Hen Identifier:
+           
+          </label>
+          <input
+              type="text"
+              value={henIdentifier}
+              onChange={(e) => setHenIdentifier(e.target.value)}
+            />
 
-        <label>
-          Lockdown (Date):
-          <input type="date" value={lockdownDate} onChange={(e) => setLockdownDate(e.target.value)} />
-        </label>
+          <label>
+            Set (Date):
+           
+          </label>
+          <input
+              type="date"
+              value={setDate}
+              onChange={(e) => setSetDate(e.target.value)}
+            />
 
-        <label>
-          Hatch (Date):
-          <input type="date" value={hatchDate} onChange={(e) => setHatchDate(e.target.value)} />
-        </label>
+          <label>
+            Lockdown (Date):
+            
+          </label>
+          <input
+              type="date"
+              value={lockdownDate}
+              onChange={(e) => setLockdownDate(e.target.value)}
+            />
 
-        <label>
-          # Set:
-          <input type="number" value={numberSet} onChange={(e) => setNumberSet(e.target.valueAsNumber)} />
-        </label>
+          <label>
+            Hatch (Date):
+            
+          </label>
+          <input
+              type="date"
+              value={hatchDate}
+              onChange={(e) => setHatchDate(e.target.value)}
+            />
 
-        <label>
-          # Fertile:
-          <input type="number" value={numberFertile} onChange={(e) => setNumberFertile(e.target.valueAsNumber)} />
-        </label>
+          <label>
+            # Set:
+           
+          </label>
+          <input
+              type="number"
+              value={numberSet}
+              onChange={(e) => setNumberSet(e.target.valueAsNumber)}
+            />
 
-        <label>
-          # Hatch:
-          <input type="number" value={numberHatch} onChange={(e) => setNumberHatch(e.target.valueAsNumber)} />
-        </label>
+          <label>
+            # Fertile:
+            
+          </label>
+          <input
+              type="number"
+              value={numberFertile}
+              onChange={(e) => setNumberFertile(e.target.valueAsNumber)}
+            />
 
-        <label>
-          Fertility Rate:
-          <input type="number" value={fertilityRate} onChange={(e) => setFertilityRate(e.target.valueAsNumber)} />
-        </label>
+          <label>
+            # Hatch:
+           
+          </label>
+          <input
+              type="number"
+              value={numberHatch}
+              onChange={(e) => setNumberHatch(e.target.valueAsNumber)}
+            />
 
-        <label>
-          Hatch Rate:
-          <input type="number" value={hatchRate} onChange={(e) => setHatchRate(e.target.valueAsNumber)} />
-        </label>
+          <label>
+            Fertility Rate:
+           
+          </label>
+          <input
+              type="number"
+              value={fertilityRate}
+              onChange={(e) => setFertilityRate(e.target.valueAsNumber)}
+            />
 
-        <label>
-          Hatchability Rate:
-          <input type="number" value={hatchabilityRate} onChange={(e) => setHatchabilityRate(e.target.valueAsNumber)} />
-        </label>
+          <label>
+            Hatch Rate:
+          
+          </label>
+          <input
+              type="number"
+              value={hatchRate}
+              onChange={(e) => setHatchRate(e.target.valueAsNumber)}
+            />
 
-        <label>
-          Location:
-          <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
-        </label>
+          <label>
+            Hatchability Rate:
+          
+          </label>
+          <input
+              type="number"
+              value={hatchabilityRate}
+              onChange={(e) => setHatchabilityRate(e.target.valueAsNumber)}
+            />
 
-        <label>
-          Notes:
-          <textarea value={notes} onChange={(e) => setNotes(e.target.value)} />
-        </label>
+          <label>
+            Location:
+           
+          </label>
+          <input
+              type="text"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
 
+          <label>
+            Notes:
+          
+          </label>
+          <textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+            />
 
-        <button type="submit">Submit</button>
-      </form>
-
+          {/* <button type="submit">Submit</button> */}
+        </form>
+      </div>
     </>
   );
 }

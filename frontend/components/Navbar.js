@@ -15,7 +15,7 @@ function Navbar() {
         <nav className="nav-bar">
           <ul>
             <li>
-              <Link href="" className="active">
+              <Link href="/" className="active">
                 Home
               </Link>
             </li>
