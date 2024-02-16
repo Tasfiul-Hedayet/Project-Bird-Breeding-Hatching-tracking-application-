@@ -21,7 +21,6 @@ export default function Home() {
               <Link href="/hatch">Add Hatch</Link>
             </button>
           </div>
-
           <div className="bg-cover"></div>
         </div>
       </div>

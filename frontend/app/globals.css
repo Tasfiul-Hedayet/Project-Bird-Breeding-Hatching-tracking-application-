@@ -81,6 +81,7 @@ button:hover {
   background-color: #45a049;
 }
 
+
 .hero-section{
   display: flex;
   flex-direction: row;
@@ -226,6 +227,61 @@ button:hover {
   }
   .nav-bar ul li a{
       margin-bottom: 12px;
+  }
+
+  .hero-section{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .heading{
+    font-size: 40px;
+    font-style: italic;
+    padding-left: 40px;
+    margin-top: 160px;
+    color: var(--text-color);
+  }
+  
+  .heading-2{
+    font-size: 40px;
+    font-style: italic;
+    padding-left: 40px;
+    color: var(--text-color);
+  }
+  
+  .heading-3{
+    font-size: 40px;
+    font-style: italic;
+    padding-left: 40px;
+    color: var(--text-color);
+    padding-bottom: 30px;
+  }
+
+  .button-1{
+    font-style: italic;
+    padding-left: 30px;
+    margin-left: 40px;
+    border-radius: 50px;
+    background-color: var(--third-color);
+  }
+  
+  .button-2{
+    font-style: italic;
+    margin-left: 10px;
+    border-radius: 50px;
+    background-color: var(--third-color);
+  }
+  
+  
+  .bg-cover{
+    margin-top: 40px;
+    margin-right: 40px;
+    background-image: url("../public/Bird\ Breeding\ Hatching\ Tracking\ Application.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 90%;
+    z-index: 1;
   }
 
   .body > h1{
