@@ -199,16 +199,16 @@ button:hover {
   .nav-bar{
       height: 0px;
       position: absolute;
-      top: 80px;
+      top: 70px;
       left: 0;
       right: 0;
       width: 100vw;
-      background-color: #111011;
+      background-color: #280303;
       transition: 0.5s;
   }
 
   .nav-bar.active{
-      height: 450px;
+      height: 300px;
   }
 
   .nav-bar ul{
@@ -220,6 +220,7 @@ button:hover {
       opacity: 0;
       overflow: hidden;
   }
+
   .nav-bar.active ul{
       opacity: 1;
   }

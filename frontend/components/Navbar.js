@@ -1,18 +1,31 @@
-import React from "react";
-import Link from 'next/link'
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
 
 function Navbar() {
+  const [isNavBarActive, setIsNavBarActive] = useState(false);
+
+  const toggleNavBar = () => {
+    setIsNavBarActive(!isNavBarActive);
+  };
+
   return (
     <div>
       <header>
-        <div className="logo">Knudson Farm</div>
-        <div className="hamburger">
+        <div className="logo">
+          {" "}
+          <Link href="/">
+            Knudson Farm
+          </Link>
+        </div>
+        <div className="hamburger" onClick={toggleNavBar}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
-        <nav className="nav-bar">
+        <nav className={`nav-bar ${isNavBarActive ? "active" : ""}`}>
           <ul>
             <li>
               <Link href="/" className="active">
