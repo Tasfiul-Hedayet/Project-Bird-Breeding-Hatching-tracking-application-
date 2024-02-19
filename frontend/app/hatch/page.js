@@ -218,8 +218,9 @@ function Page() {
               onChange={(e) => setNotes(e.target.value)}
             />
 
-          {/* <button type="submit">Submit</button> */}
+          
         </form>
+        <button className="Submit-btn" type="submit">Submit</button>
       </div>
     </>
   );

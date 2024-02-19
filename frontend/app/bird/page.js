@@ -202,9 +202,8 @@ function Page() {
             value={showPlacing}
             onChange={(e) => setShowPlacing(e.target.value)}
           />
-
-          {/* <button type="submit">Submit</button> */}
         </form>
+        <button className="Submit-btn" type="submit">Submit</button>
       </div>
     </>
   );

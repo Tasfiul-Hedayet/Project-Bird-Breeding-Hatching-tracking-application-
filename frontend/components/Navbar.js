@@ -32,11 +32,17 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/bird">Bird</Link>
             </li>
             <li>
               <Link href="/hatch">Hatch</Link>
+            </li> */}
+            <li>
+              <Link href="/Bird_Tracker">Bird</Link>
+            </li>
+            <li>
+              <Link href="/Hatch_Tracker">Hatch</Link>
             </li>
           </ul>
         </nav>

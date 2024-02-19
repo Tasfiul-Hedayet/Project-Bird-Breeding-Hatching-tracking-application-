@@ -172,6 +172,45 @@ button:hover {
   display: inline;
 }
 
+.Submit-btn{
+  margin-left: 350px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background-color: var(--text-color);
+}
+
+
+
+/* Bird tracker */
+
+.body > p{
+  padding-left: 20px;
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.body > input{
+  margin: 20px;
+  height: 30px;
+  padding: 25px;
+  border: none;
+  background-color: #ffffffd6;
+}
+
+
+.s-btn{
+  border: none;
+  background-color: #ffffffd6;
+  height: 50px;
+  padding: 10px;
+}
+
+
+
+
+
 
 
 @media only screen and (max-width: 1320px) {
@@ -317,5 +356,11 @@ button:hover {
     color: var(--bg-color);
     background-color: var(--text-color);
     display: inline;
+  }
+
+  .Submit-btn{
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 }
