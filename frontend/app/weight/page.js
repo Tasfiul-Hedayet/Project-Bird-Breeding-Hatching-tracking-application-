@@ -1,7 +1,8 @@
 "use client";
 import Navbar from "@/components/Navbar";
+import axios from "axios";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function page() {
   const [legTag, setLegTag] = useState(""); // legtag
@@ -19,6 +20,24 @@ function page() {
       weight,
     });
   };
+
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+
+    try {
+      const response = await axios.get('https://bird-hatch.onrender.com/api/v1/weights/getAllWeights');
+      const data =  await response.data.data.allWeights;
+      console.log(data);
+      // response.status(200).json(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      // response.status(500).json({ error: 'Internal Server Error' });
+    }
+  };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -46,10 +65,9 @@ function page() {
             onChange={(e) => setWeight(e.target.value)}
           />
           <button className="Submit-btn" type="submit">
-          Submit
-        </button>
+            Submit
+          </button>
         </form>
-        
       </div>
     </>
   );

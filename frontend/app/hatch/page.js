@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Page() {
   const [hatchNumber, setHatchNumber] = useState(1); // Hatch Number (should increment)
