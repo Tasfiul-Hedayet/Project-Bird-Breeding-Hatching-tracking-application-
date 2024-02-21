@@ -59,12 +59,12 @@ function Page() {
         <h1>Bird Page</h1>
 
         <form onSubmit={handleSubmit}>
-          <label>Identifier:</label>
+          {/* <label>Identifier:</label>
           <input
             type="number"
             value={identifier}
             onChange={(e) => setIdentifier(e.target.value)}
-          />
+          /> */}
 
           <label>Name:</label>
           <input
@@ -202,8 +202,9 @@ function Page() {
             value={showPlacing}
             onChange={(e) => setShowPlacing(e.target.value)}
           />
+          <button className="Submit-btn" type="submit">Submit</button>
         </form>
-        <button className="Submit-btn" type="submit">Submit</button>
+        
       </div>
     </>
   );

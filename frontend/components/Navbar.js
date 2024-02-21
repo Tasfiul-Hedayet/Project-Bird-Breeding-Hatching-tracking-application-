@@ -32,12 +32,9 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            {/* <li>
-              <Link href="/bird">Bird</Link>
-            </li>
             <li>
-              <Link href="/hatch">Hatch</Link>
-            </li> */}
+              <Link href="/weight">Create Weight</Link>
+            </li>
             <li>
               <Link href="/Bird_Tracker">Bird</Link>
             </li>

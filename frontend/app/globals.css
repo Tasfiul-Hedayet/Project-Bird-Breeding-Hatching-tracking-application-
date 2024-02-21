@@ -173,7 +173,8 @@ button:hover {
 }
 
 .Submit-btn{
-  margin-left: 350px;
+  width: 100px;
+  margin-left: 130px;
   margin-top: 30px;
   margin-bottom: 50px;
   background-color: var(--text-color);
