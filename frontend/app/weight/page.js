@@ -4,7 +4,7 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 
-function page() {
+function Page() {
   const [legTag, setLegTag] = useState(""); // legtag
   const [date, setDate] = useState(""); // date
   const [weight, setWeight] = useState(""); // weight
@@ -73,4 +73,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
