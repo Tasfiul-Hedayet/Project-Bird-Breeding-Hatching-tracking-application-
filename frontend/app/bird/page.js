@@ -1,7 +1,9 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 
 function Page() {
   const [identifier, setIdentifier] = useState(1); //Identifier
@@ -52,6 +54,25 @@ function Page() {
     });
   };
 
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://bird-hatch.onrender.com/api/v1/birds/findAllBirds"
+        );
+        const data = await response.data.data.allBirds;
+        console.log(data);
+        // response.status(200).json(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        // response.status(500).json({ error: 'Internal Server Error' });
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="body">
@@ -74,22 +95,19 @@ function Page() {
             onChange={(e) => setName(e.target.value)}
           />
 
-              <label>Species:</label>
-              <input
-                type="text"
-                value={species}
-                onChange={(e) => setSpecies(e.target.value)}
-              />
+          <label>Species:</label>
+          <input
+            type="text"
+            value={species}
+            onChange={(e) => setSpecies(e.target.value)}
+          />
 
-
-            <label>Breed:</label>
-            <input
-              type="text"
-              value={breed}
-              onChange={(e) => setBreed(e.target.value)}
-            />
-
-
+          <label>Breed:</label>
+          <input
+            type="text"
+            value={breed}
+            onChange={(e) => setBreed(e.target.value)}
+          />
 
           <label>Status:</label>
           <input
@@ -202,9 +220,10 @@ function Page() {
             value={showPlacing}
             onChange={(e) => setShowPlacing(e.target.value)}
           />
-          <button className="Submit-btn" type="submit">Submit</button>
+          <button className="Submit-btn" type="submit">
+            Submit
+          </button>
         </form>
-        
       </div>
     </>
   );
